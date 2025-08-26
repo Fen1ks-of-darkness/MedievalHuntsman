@@ -1,0 +1,20 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+
+#pragma once
+
+#include "CoreMinimal.h"
+#include "GameFramework/HUD.h"
+#include "MHMHUD.generated.h"
+
+UCLASS(Abstract)
+class MEDIEVALHUNTSMAN_API AMHMHUD final : public AHUD
+{
+    GENERATED_BODY()
+
+protected:
+    virtual void BeginPlay() override;
+
+private:
+    UPROPERTY(EditDefaultsOnly, Category = "Settings")
+    TSubclassOf<UUserWidget> HUDWidgetClass;
+};
